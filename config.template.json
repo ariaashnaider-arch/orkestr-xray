@@ -16,20 +16,11 @@
         "decryption": "none"
       },
       "streamSettings": {
-        "network": "xhttp",
+        "network": "ws",
         "security": "none",
-        "xhttpSettings": {
-          "path": "__XHTTP_PATH__",
-          "mode": "auto"
+        "wsSettings": {
+          "path": "__XHTTP_PATH__"
         }
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "routeOnly": true
       }
     }
   ],
@@ -42,16 +33,5 @@
       "protocol": "blackhole",
       "tag": "block"
     }
-  ],
-  "routing": {
-    "rules": [
-      {
-        "type": "field",
-        "ip": [
-          "geoip:private"
-        ],
-        "outboundTag": "block"
-      }
-    ]
-  }
+  ]
 }
