@@ -1,6 +1,6 @@
 FROM alpine:3.22
 
-ARG XRAY_VERSION=26.7.11
+ARG XRAY_VERSION=26.7.28
 
 RUN apk add --no-cache ca-certificates wget unzip \
     && wget -q "https://github.com/XTLS/Xray-core/releases/download/v${XRAY_VERSION}/Xray-linux-64.zip" -O /tmp/xray.zip \
